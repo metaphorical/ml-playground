@@ -11,19 +11,20 @@ scalar_summary = tf.summary.scalar('My_scalar_summary', x_scalar)
 # A histogram summary for the non-scalar (i.e. 2D or matrix) tensor
 histogram_summary = tf.summary.histogram('My_histogram_summary', x_matrix)
 
+# ____step 2:____ merge all summaries
+merged = tf.summary.merge_all()
+
 init = tf.global_variables_initializer()
 
 # launch the graph in a session
 with tf.Session() as sess:
-    # ____step 2:____ creating the writer inside the session
+    # ____step 3:____ creating the writer inside the session
     writer = tf.summary.FileWriter('../logs/graphs', sess.graph)
     for step in range(100):
         # loop over several initializations of the variable
         sess.run(init)
-        # ____step 3:____ evaluate the merged summaries
-        summary1, summary2 = sess.run([scalar_summary, histogram_summary])
-        # s____step 4:____ add the summary to the writer (i.e. to the event file) to write on the disc
-        writer.add_summary(summary1, step)
-        # repeat steps 4 for the histogram summary
-        writer.add_summary(summary2, step)
+        # ____step 4:____ evaluate the merged summaries
+        summary = sess.run(merged)
+        # ____step 5:____ add summary to the writer (i.e. to the event file) to write on the disc
+        writer.add_summary(summary, step)
     print('Done writing the summaries')
