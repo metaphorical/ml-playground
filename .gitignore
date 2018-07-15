@@ -2,3 +2,4 @@ tfvenv
 .vscode
 learning/logs
 *.pyc
+MNIST_data

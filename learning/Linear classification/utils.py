@@ -2,6 +2,8 @@ import numpy as np
 import random
 import scipy
 from tensorflow.examples.tutorials.mnist import input_data
+import matplotlib
+matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 
 
