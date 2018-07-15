@@ -1,3 +1,4 @@
 tfvenv
 .vscode
 learning/logs
+*.pyc
