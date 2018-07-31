@@ -4,6 +4,13 @@
 
 While learning, this is what I found useful:
 
+### Primary
+
+* [Basic, academic, ML Course from Stanford on Coursera](https://www.coursera.org/learn/machine-learning)
+* [fast.ai course 1](http://course.fast.ai/index.html)
+
+### Secondary
+
 * [Easy TensorFlow](https://github.com/easy-tensorflow/easy-tensorflow)
 * [TensorFlow website](https://www.tensorflow.org/)
 * [TensorFlow API docs](https://www.tensorflow.org/api_docs/)
