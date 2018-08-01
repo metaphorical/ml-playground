@@ -1,4 +1,5 @@
 tfvenv
+fastvenv
 .vscode
 learning/logs
 *.pyc
